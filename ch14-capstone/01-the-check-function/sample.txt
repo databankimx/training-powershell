@@ -1,0 +1,2 @@
+cmd: ok
+collection-missing-tool: missing

@@ -1,0 +1,8 @@
+{
+  "title": "Headers and Comments",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Write a script with a version requirement, a help block, and a line that prints Ready.",
+  "prerequisites": ["Calling One Script from Another"],
+  "hint": "The first line is #Requires -Version 7.0. Next comes a block comment that starts with <# and has .SYNOPSIS and a sentence under it, and ends with #>. The last line is Write-Output with Ready in double quotes."
+}

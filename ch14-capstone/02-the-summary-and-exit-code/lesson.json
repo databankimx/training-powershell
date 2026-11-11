@@ -1,0 +1,8 @@
+{
+  "title": "The Summary and the Exit Code",
+  "runtime": "powershell",
+  "minutes": 30,
+  "objective": "Check three names, print a summary line for each, and print how many passed.",
+  "prerequisites": ["The Check Function"],
+  "hint": "Define Test-Tool as in the last step. Then $checks = [ordered]@{ with cmd, where.exe, and collection-missing-tool as keys, each set to Test-Tool. Then a foreach that prints key: value. Then $passed = @($checks.Values | Where-Object { $_ -eq \"ok\" }).Count, and Write-Output with Passed, $passed, of, and $($checks.Count)."
+}

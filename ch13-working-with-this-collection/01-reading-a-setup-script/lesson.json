@@ -1,0 +1,8 @@
+{
+  "title": "Reading a Setup Script",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Rebuild the stop helper from a setup script, and call it with a message.",
+  "prerequisites": ["Summary: Debugging a Script"],
+  "hint": "Define function Stop-Setup with a parameter [string]$message. Inside, Write-Output with SETUP STOPPED: and $message in double quotes. After the closing brace, call Stop-Setup -message \"Git is missing\"."
+}

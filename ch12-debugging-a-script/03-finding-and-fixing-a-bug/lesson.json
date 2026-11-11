@@ -1,0 +1,8 @@
+{
+  "title": "Finding and Fixing a Bug",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Find the bug in a total calculation, and fix the loop so the function returns the sum of the prices.",
+  "prerequisites": ["Printing What the Script Is Doing"],
+  "hint": "Inside the loop, the line $total = $price replaces the total each time. Change it to $total += $price, which adds the price to the total. Keep the rest of the script as it is."
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Scripts",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Write a helper script into the practice folder, call it, and print the greeting it returns.",
+  "prerequisites": ["Headers and Comments"],
+  "hint": "Set-Content writes greet.ps1 with -Value and single quotes around Write-Output \"Hello from greet\". Then $message = & and the full path to greet.ps1. Then Write-Output with Greeting: and $message."
+}

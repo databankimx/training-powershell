@@ -1,0 +1,8 @@
+{
+  "title": "Sorting, Selecting, and Repeating",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Sort three files in reverse, keep the first two, and print a line for each one.",
+  "prerequisites": ["Filtering with Where-Object"],
+  "hint": "Make the three files first. Then one pipeline: Get-ChildItem with -Path and -File, then Sort-Object Name -Descending, then Select-Object -First 2, then ForEach-Object with braces that print File: and $($_.Name)."
+}

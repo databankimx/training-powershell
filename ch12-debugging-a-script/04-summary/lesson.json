@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Debugging a Script",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Fix a misspelled variable name that strict mode reports, so the total prints correctly.",
+  "prerequisites": ["Finding and Fixing a Bug"],
+  "hint": "Read the error. It names the variable, $totl. The total was stored in $total, so change the name in the output line to $total and keep the rest the same."
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Errors",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Write a function that tries to find a file, returns Found or Missing, and print the result.",
+  "prerequisites": ["Choosing How Errors Behave"],
+  "hint": "Define Test-File with a param block taking [string]$Path. Inside, try Get-Item -Path $Path -ErrorAction Stop | Out-Null, then return Found. In catch, return Missing. Store the call in $result, then print missing.txt: and $result, then Checks run: 1."
+}

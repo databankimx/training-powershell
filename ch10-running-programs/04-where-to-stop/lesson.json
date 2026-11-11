@@ -1,0 +1,8 @@
+{
+  "title": "Where to Stop",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Apply the rule of thumb for when a script should become a program, and print the decision.",
+  "prerequisites": ["Capturing Output"],
+  "hint": "First line: $lines = 250. Then an if with $lines -gt 100 as the test. Write-Output Consider a .NET program in the if block, and PowerShell is fine in the else block."
+}

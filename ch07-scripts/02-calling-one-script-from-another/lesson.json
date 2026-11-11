@@ -1,0 +1,8 @@
+{
+  "title": "Calling One Script from Another",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Write a helper script into the practice folder, call it, and print the value it returned.",
+  "prerequisites": ["Saving and Running a Script"],
+  "hint": "Set-Content writes the helper with -Value and single quotes around Write-Output \"Hi from helper\". Then $result = & followed by the full path to helper.ps1. Then Write-Output with Child says: and $result."
+}

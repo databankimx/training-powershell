@@ -1,0 +1,8 @@
+{
+  "title": "Reading an Error",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Trigger a missing-file error quietly, and print how many errors PowerShell recorded.",
+  "prerequisites": ["Summary: Parameters and Functions"],
+  "hint": "First $Error.Clear(). Then Get-Item with the full path to missing.txt and -ErrorAction SilentlyContinue. Then Write-Output with Errors recorded: and $($Error.Count) inside double quotes."
+}

@@ -1,0 +1,2 @@
+File: cherry.log
+File: banana.txt

@@ -1,0 +1,8 @@
+{
+  "title": "The Check Function",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Write a function that returns ok when a tool is found and missing when it isn't, and use it on two names.",
+  "prerequisites": ["Summary: Working with This Collection"],
+  "hint": "Define Test-Tool with a param block taking [string]$Name. Inside, $found = Get-Command -Name $Name -ErrorAction SilentlyContinue. Then if ($found) returns ok, and else returns missing. Then two Write-Output lines using $(Test-Tool -Name 'cmd') and $(Test-Tool -Name 'collection-missing-tool')."
+}

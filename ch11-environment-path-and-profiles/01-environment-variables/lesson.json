@@ -1,0 +1,8 @@
+{
+  "title": "Environment Variables",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Set an environment variable for the current session, and print it in a sentence.",
+  "prerequisites": ["Summary: Running Programs"],
+  "hint": "First line: $env:GREETING = \"Hello\". Second line: Write-Output with \"$env:GREETING from the environment\" in double quotes. The env: part is needed on both lines."
+}

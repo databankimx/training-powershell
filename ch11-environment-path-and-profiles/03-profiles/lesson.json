@@ -1,0 +1,8 @@
+{
+  "title": "Profiles",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Print the file name of the PowerShell 7 profile, without its folder.",
+  "prerequisites": ["The PATH"],
+  "hint": "Write-Output with Profile file: and $(Split-Path $PROFILE -Leaf) inside double quotes. The -Leaf switch keeps only the file name."
+}

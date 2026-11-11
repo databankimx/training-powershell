@@ -1,0 +1,8 @@
+{
+  "title": "Summary: The Capstone",
+  "runtime": "powershell",
+  "minutes": 30,
+  "objective": "Finish the core checker: count the checks that failed, print the pass count, and print a passed or failed result.",
+  "prerequisites": ["Where the Checker Should Stop"],
+  "hint": "Include Test-Tool as before, and the ordered $checks list. Then $failed = @($checks.Values | Where-Object { $_ -ne \"ok\" }).Count. Print Passed, the pass count, of, and the total. Then an if with $failed -gt 0 that prints Result: failed, and an else that prints Result: passed."
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Saving and Running a Script",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Write a two-line script that prints Script started and then Script finished.",
+  "prerequisites": [],
+  "hint": "Two Write-Output lines, one after the other: Write-Output \"Script started\" and then Write-Output \"Script finished\". Capital S and the spacing have to match exactly."
+}

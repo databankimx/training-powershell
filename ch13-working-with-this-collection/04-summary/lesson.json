@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Working with This Collection",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Print an ordered summary of two checks, followed by a closing line.",
+  "prerequisites": ["Running from the Right Folder"],
+  "hint": "Use $summary = [ordered]@{ with Git and Runner both set to ok. Then the foreach loop from the last step, printing key, colon, and value. Then Write-Output Setup finished."
+}
