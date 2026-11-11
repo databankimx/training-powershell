@@ -1,0 +1,3 @@
+Folder: C:\Development\ps-practice
+Characters: 26
+Upper: C:\DEVELOPMENT\PS-PRACTICE

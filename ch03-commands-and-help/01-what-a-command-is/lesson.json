@@ -1,0 +1,8 @@
+{
+  "title": "What a Command Is",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Take Get-Date apart and print its verb and its noun in one sentence.",
+  "prerequisites": [],
+  "hint": "Write-Output, with a string in double quotes. Put $((Get-Command Get-Date).Verb) where the verb goes, and $((Get-Command Get-Date).Noun) where the noun goes. Keep the words Verb: and Noun: and the spaces exactly as shown."
+}

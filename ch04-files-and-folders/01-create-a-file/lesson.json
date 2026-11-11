@@ -1,0 +1,8 @@
+{
+  "title": "Creating a File",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Create a file in the practice folder with Set-Content, and print a message once it's there.",
+  "prerequisites": [],
+  "hint": "Use Set-Content with -Path and -Value, and give the full path, C:\\Development\\ps-practice\\notes.txt, in double quotes. The second line is Write-Output with Notes file ready in double quotes. Check that the file's text is exactly Practice notes."
+}

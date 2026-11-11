@@ -1,0 +1,8 @@
+{
+  "title": "Deleting Safely",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Delete the files whose names start with old with a wildcard, and keep the file called keep.txt.",
+  "prerequisites": ["Copying, Moving, and Renaming"],
+  "hint": "Make the three files first, with Set-Content and the full path for each. Then Remove-Item with the path C:\\Development\\ps-practice\\old*.txt. Only the old files should match the wildcard. Write-Output prints the sentence."
+}

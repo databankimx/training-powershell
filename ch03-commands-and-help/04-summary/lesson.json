@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Commands and Help",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Print a command's verb, its help name, and the name of a command found by search, in three lines.",
+  "prerequisites": ["Finding a Command"],
+  "hint": "Three Write-Output lines. Use $((Get-Command Remove-Item).Verb), $((Get-Help Clear-Host).Name), and $((Get-Command -Verb Set -Noun Content).Name). Put Verb:, Help for:, and Found: in front of them, with a space after each."
+}

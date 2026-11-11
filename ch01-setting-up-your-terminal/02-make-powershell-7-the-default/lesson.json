@@ -1,0 +1,8 @@
+{
+  "title": "Make PowerShell 7 the Default",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Set Windows Terminal to open PowerShell 7 by default, and confirm the edition in a new window.",
+  "prerequisites": ["Install PowerShell 7"],
+  "hint": "Use Write-Output with a string in double quotes. Start the string with Edition: and a space, then put $($PSVersionTable.PSEdition) inside it. Check that the window you're using was opened after you changed the default."
+}

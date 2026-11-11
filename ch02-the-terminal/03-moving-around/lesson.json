@@ -1,0 +1,8 @@
+{
+  "title": "Moving Around",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Move into the practice folder, step back up one level, and print where you ended up.",
+  "prerequisites": ["Absolute and Relative Paths"],
+  "hint": "Two Set-Location lines: the first with the full path to the practice folder, the second with .. to step up. The last line is Write-Output with Back in: and $((Get-Location).Path) inside double quotes."
+}

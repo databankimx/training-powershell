@@ -1,0 +1,8 @@
+{
+  "title": "Storing Values",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Store a name in a variable, and print a greeting that reads it from the variable.",
+  "prerequisites": [],
+  "hint": "First line: $name = \"Ada\". Second line: Write-Output with \"Hello, $name\" in double quotes. The dollar sign in front of name makes PowerShell read the variable."
+}

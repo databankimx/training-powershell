@@ -1,0 +1,8 @@
+{
+  "title": "Reading the Prompt",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Move into the practice folder, then print the location, to confirm where the script is working.",
+  "prerequisites": [],
+  "hint": "Set-Location with the full path to C:\\Development\\ps-practice. Then Write-Output with Now in: and $((Get-Location).Path) inside double quotes."
+}

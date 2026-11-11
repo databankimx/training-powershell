@@ -1,0 +1,8 @@
+{
+  "title": "Absolute and Relative Paths",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Create a folder, move into it, and write a file there using only its name, then print a confirmation.",
+  "prerequisites": ["Reading the Prompt"],
+  "hint": "Make the reports folder first with New-Item and the full path. Then Set-Location into it, with the full path. After that, Set-Content can use just summary.txt. Write-Output prints the sentence."
+}

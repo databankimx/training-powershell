@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Variables and Strings",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Store a folder name, then print it, its length, and its upper-case form on three lines.",
+  "prerequisites": ["Building Text"],
+  "hint": "Store the path in $folder first. Then three Write-Output lines: one with $folder, one with $($folder.Length), and one with $($folder.ToUpper()). Put Folder:, Characters:, and Upper: in front of them, with a space after each."
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Setting Up Your Terminal",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Review the chapter's setup, and print one line that confirms PowerShell 7 and its edition.",
+  "prerequisites": ["Create Your Practice Folder"],
+  "hint": "Use Write-Output with one string in double quotes. Put $($PSVersionTable.PSVersion.Major) and $($PSVersionTable.PSEdition) inside it, with PowerShell, a space, a bracket around the edition, and the word is ready at the end."
+}

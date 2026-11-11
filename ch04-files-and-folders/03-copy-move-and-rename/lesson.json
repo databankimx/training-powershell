@@ -1,0 +1,8 @@
+{
+  "title": "Copying, Moving, and Renaming",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Copy, move, and rename files with a script, and confirm where each one ends up.",
+  "prerequisites": ["Looking Inside a Folder"],
+  "hint": "Make the archive folder first with New-Item. Copy-Item needs -Destination with the new file's full path. Move-Item moves a file into a folder, and the destination includes the file name. Rename-Item needs -NewName with a name only, no folder."
+}

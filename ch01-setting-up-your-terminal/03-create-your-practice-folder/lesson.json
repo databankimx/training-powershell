@@ -1,0 +1,8 @@
+{
+  "title": "Create Your Practice Folder",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Create the practice folder with a script, and print a message to show it's ready.",
+  "prerequisites": ["Make PowerShell 7 the Default"],
+  "hint": "The first line makes the folder: New-Item, then -ItemType Directory, -Force, and -Path with the folder's path in quotes, then | Out-Null. The second line is Write-Output with the words Practice folder ready in double quotes."
+}
