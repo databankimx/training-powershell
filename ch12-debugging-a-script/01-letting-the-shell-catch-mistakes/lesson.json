@@ -1,0 +1,8 @@
+{
+  "title": "Letting the Shell Catch Mistakes",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Turn on strict mode, and catch a misspelled variable inside a try block.",
+  "prerequisites": ["Summary: Environment, PATH, and Profiles"],
+  "hint": "First line: Set-StrictMode -Version Latest. Then $name = \"Ada\". Then try, with Write-Output Hello, and $nmae in double quotes, then catch with Write-Output Caught a typo."
+}

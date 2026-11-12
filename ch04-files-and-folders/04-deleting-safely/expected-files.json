@@ -1,0 +1,7 @@
+{
+  "files": {
+    "keep.txt": "keep\n",
+    "old1.txt": false,
+    "old2.txt": false
+  }
+}

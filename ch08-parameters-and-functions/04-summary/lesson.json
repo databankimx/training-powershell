@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Parameters and Functions",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Define a function with a defaulted parameter, and print two totals from it.",
+  "prerequisites": ["Switches and Checks"],
+  "hint": "Define Get-Total with a param block: [int]$Price, and [int]$Count = 1. Inside, return $Price * $Count. Then two Write-Output lines: Total: with $(Get-Total -Price 4 -Count 3), and One: with $(Get-Total -Price 4)."
+}

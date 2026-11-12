@@ -1,0 +1,8 @@
+{
+  "title": "Install PowerShell 7",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Confirm that PowerShell 7 is the shell you're using, and write a one-line script that prints its major version.",
+  "prerequisites": [],
+  "hint": "The line starts with Write-Output, then a string in double quotes. Inside the quotes, put $($PSVersionTable.PSVersion.Major) where you want the number to appear. Single quotes won't fill in the number, so use double quotes."
+}

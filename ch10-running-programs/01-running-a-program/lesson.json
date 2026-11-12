@@ -1,0 +1,8 @@
+{
+  "title": "Running a Program",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Run a program from a script, and see the text it prints.",
+  "prerequisites": ["Summary: Errors"],
+  "hint": "Type the command on one line, with no Write-Output: cmd /c echo Ready from cmd. Leave out any quotation marks, because cmd would print them too."
+}

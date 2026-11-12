@@ -1,0 +1,8 @@
+{
+  "title": "Functions",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Define a function that doubles a number, call it, and print the result in a sentence.",
+  "prerequisites": ["Parameters"],
+  "hint": "Write the function first: function Get-Doubled, then a param block with [int]$Number, then the line $Number * 2 inside the braces. After the closing brace, write Write-Output with Doubled: and $(Get-Doubled -Number 21) in double quotes."
+}

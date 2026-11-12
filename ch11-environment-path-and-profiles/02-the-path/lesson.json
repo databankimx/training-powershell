@@ -1,0 +1,8 @@
+{
+  "title": "The PATH",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Add the practice folder to the PATH for this session, then check that it's there.",
+  "prerequisites": ["Environment Variables"],
+  "hint": "First line: $env:Path = \"C:\\Development\\ps-practice;\" + $env:Path. Second line: Write-Output with On PATH: and $(...) inside double quotes, using $env:Path -split ';' -contains with the folder in single quotes."
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Printing What the Script Is Doing",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Write a function with a verbose note that stays hidden, and print its result.",
+  "prerequisites": ["Letting the Shell Catch Mistakes"],
+  "hint": "Define Get-Triple with a param block taking [int]$Number. Inside, Write-Verbose \"Tripling $Number\", then Write-Output ($Number * 3). Then Write-Output with Result: and $(Get-Triple -Number 5) in double quotes."
+}

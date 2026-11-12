@@ -1,0 +1,8 @@
+{
+  "title": "Switches and Checks",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Define a function with a switch, and print its result with and without the switch.",
+  "prerequisites": ["Functions"],
+  "hint": "Define Format-Label with a param block: [string]$Text and [switch]$Upper. Inside, if ($Upper) returns $Text.ToUpper(), and else returns $Text. Then two lines: Write-Output (Format-Label -Text \"ready\") and Write-Output (Format-Label -Text \"ready\" -Upper)."
+}

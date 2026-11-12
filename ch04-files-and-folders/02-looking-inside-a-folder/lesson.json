@@ -1,0 +1,8 @@
+{
+  "title": "Looking Inside a Folder",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Create three files, then list the names of the text files in the practice folder, sorted.",
+  "prerequisites": ["Creating a File"],
+  "hint": "Make the three files first, with Set-Content, using the full folder path in each line. Then use Get-ChildItem with -Path, -Filter \"*.txt\", and -Name, and pipe the result to Sort-Object. The folder is empty when the script starts, so the listing has to come after the files are made."
+}

@@ -1,0 +1,5 @@
+{
+  "files": {
+    "greet.ps1": "Write-Output \"Hello from greet\"\n"
+  }
+}

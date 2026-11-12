@@ -1,0 +1,8 @@
+{
+  "title": "Getting Help",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Read a command's name from its help page, and print it in a sentence.",
+  "prerequisites": ["What a Command Is"],
+  "hint": "Write-Output with a string in double quotes. Start it with Help for: and a space, then put $((Get-Help Clear-Host).Name) after it."
+}

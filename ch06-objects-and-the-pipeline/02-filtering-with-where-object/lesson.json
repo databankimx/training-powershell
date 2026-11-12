@@ -1,0 +1,8 @@
+{
+  "title": "Filtering with Where-Object",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Make three files, keep the text files with Where-Object, and print how many there are.",
+  "prerequisites": ["Objects, Not Text"],
+  "hint": "Make the three files first. Then one line: $textFiles = Get-ChildItem with -Path and -File, piped to Where-Object { $_.Extension -eq \".txt\" }. Then Write-Output with Text files: and $($textFiles.Count)."
+}

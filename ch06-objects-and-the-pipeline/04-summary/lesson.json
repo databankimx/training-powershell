@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Objects and the Pipeline",
+  "runtime": "powershell",
+  "minutes": 25,
+  "objective": "Make three files, then print how many there are, and the names that sort first and last.",
+  "prerequisites": ["Sorting, Selecting, and Repeating"],
+  "hint": "Make the files, then $files = Get-ChildItem with -Path and -File. Three Write-Output lines: Files: with $($files.Count), then First: and Last:, each with a pipeline inside $(...) that sorts $files by Name and selects -First 1 or -Last 1, then .Name."
+}

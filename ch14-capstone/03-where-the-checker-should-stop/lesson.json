@@ -1,0 +1,8 @@
+{
+  "title": "Where the Checker Should Stop",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Apply the rule of thumb to a checker of 180 lines with 4 functions, and print the decision.",
+  "prerequisites": ["The Summary and the Exit Code"],
+  "hint": "Set $lines = 180 and $functions = 4. Then an if with $lines -gt 100 -or $functions -gt 6 as the test. Write-Output Move this checker to a .NET program in the if block, and Keep this checker in PowerShell in the else block."
+}

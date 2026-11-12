@@ -1,0 +1,8 @@
+{
+  "title": "Choosing How Errors Behave",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Set the script-wide error preference to Stop, and catch the first failure with a message.",
+  "prerequisites": ["Catching Errors"],
+  "hint": "First line: $ErrorActionPreference = \"Stop\". Then try, with Get-Item and the missing path inside, but no -ErrorAction on that line. Then catch, with Write-Output and Stopped at the first error."
+}

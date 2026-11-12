@@ -1,0 +1,8 @@
+{
+  "title": "Summary: The Terminal",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Move into the practice folder, print where you are, move back up, and print where you are again.",
+  "prerequisites": ["Moving Around"],
+  "hint": "Use Set-Location to go in, then Write-Output with In: and $((Get-Location).Path). Then Set-Location with .. to go up, and Write-Output with Out: and the location again."
+}

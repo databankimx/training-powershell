@@ -1,0 +1,3 @@
+Verb: Remove
+Help for: Clear-Host
+Found: Set-Content

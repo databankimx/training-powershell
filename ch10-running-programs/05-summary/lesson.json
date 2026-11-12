@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Running Programs",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Capture a program's output, run a program that exits with code 2, and print both results.",
+  "prerequisites": ["Where to Stop"],
+  "hint": "First: $state = cmd /c echo ready. Second: cmd /c \"exit 2\" on its own line. Then two Write-Output lines, one with Output: and $state, and one with Exit code: and $LASTEXITCODE. Read the variable straight after the program that sets it."
+}

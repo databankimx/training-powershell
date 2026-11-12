@@ -1,0 +1,8 @@
+{
+  "title": "Capturing Output",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Store a program's output in a variable, and print it in a sentence.",
+  "prerequisites": ["Exit Codes"],
+  "hint": "First line: $found = cmd /c echo found, with no Write-Output in front. Second line: Write-Output with Captured: and $found inside double quotes."
+}

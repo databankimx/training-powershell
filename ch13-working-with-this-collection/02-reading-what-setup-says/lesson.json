@@ -1,0 +1,8 @@
+{
+  "title": "Reading What Setup Says",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Build an ordered summary of two checks, and print each line as key, colon, and value.",
+  "prerequisites": ["Reading a Setup Script"],
+  "hint": "Use $summary = [ordered]@{ with Git = \"ok\" and \"Node.js\" = \"ok\" inside. Then foreach ($item in $summary.GetEnumerator()) with Write-Output and $($item.Key): $($item.Value) in double quotes."
+}

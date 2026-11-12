@@ -1,0 +1,8 @@
+{
+  "title": "Running from the Right Folder",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Create a lesson-runner folder in the practice folder, move into it, and print the folder name.",
+  "prerequisites": ["Reading What Setup Says"],
+  "hint": "New-Item with -ItemType Directory, -Force, and -Path for C:\\Development\\ps-practice\\lesson-runner, then | Out-Null. Then Set-Location to that same full path. Then Write-Output with Working in: and $(Split-Path -Path (Get-Location).Path -Leaf)."
+}

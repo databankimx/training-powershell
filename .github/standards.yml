@@ -1,0 +1,6 @@
+# DataBank Standards Policy Configuration
+# See Custom-Dev-Developer-Guide.md for full rule documentation.
+#
+# This repository contains PowerShell training lessons and a JavaScript
+# (Electron) lesson runner. No paths are currently excluded from standards
+# enforcement. Add language-specific excluded_globs here if that changes.

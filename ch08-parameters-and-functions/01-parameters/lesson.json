@@ -1,0 +1,8 @@
+{
+  "title": "Parameters",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Declare a parameter with a default value, and print a greeting that uses it.",
+  "prerequisites": ["Headers and Comments"],
+  "hint": "Start with param( on its own line, then [string]$Name = \"Ada\" inside the brackets, then a closing bracket. After that, Write-Output with Hello, and $Name in double quotes. The equals sign sets the default."
+}

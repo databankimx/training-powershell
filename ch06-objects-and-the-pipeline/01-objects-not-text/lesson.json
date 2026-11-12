@@ -1,0 +1,8 @@
+{
+  "title": "Objects, Not Text",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Make three files, count the files in the practice folder as objects, and print the count.",
+  "prerequisites": ["Summary: Variables and Strings"],
+  "hint": "Three Set-Content lines with the full paths. Then $files = Get-ChildItem with -Path and -File. Then Write-Output with Files: and $($files.Count) inside double quotes."
+}

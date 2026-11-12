@@ -1,0 +1,8 @@
+{
+  "title": "Building Text",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Store a folder name, then print its length and its upper-case form on two lines.",
+  "prerequisites": ["Quoting and Interpolation"],
+  "hint": "First line: $folder = \"C:\\Development\\ps-practice\". Then two Write-Output lines, each with a $(...) inside the double quotes. One uses $folder.Length, and the other uses $folder.ToUpper() with its brackets."
+}

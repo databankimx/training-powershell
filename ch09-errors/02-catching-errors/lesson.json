@@ -1,0 +1,8 @@
+{
+  "title": "Catching Errors",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Catch a missing-file error with try and catch, and always print a final line with finally.",
+  "prerequisites": ["Reading an Error"],
+  "hint": "try { Get-Item with the missing path and -ErrorAction Stop, then Write-Output File found }. catch { Write-Output Could not find the file }. finally { Write-Output Check finished }. The -ErrorAction Stop is what lets catch see the error."
+}

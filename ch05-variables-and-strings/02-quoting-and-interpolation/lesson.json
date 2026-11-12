@@ -1,0 +1,8 @@
+{
+  "title": "Quoting and Interpolation",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Print a sentence with a dollar sign in it, using single quotes so the dollar sign is kept.",
+  "prerequisites": ["Storing Values"],
+  "hint": "Write-Output, then the text in single quotes: 'Price: $9'. Single quotes keep the dollar sign as written. Double quotes would try to read a variable called $9."
+}

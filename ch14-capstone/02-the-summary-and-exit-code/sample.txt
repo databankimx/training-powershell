@@ -1,0 +1,4 @@
+cmd: ok
+where.exe: ok
+collection-missing-tool: missing
+Passed 2 of 3

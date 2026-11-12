@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Files and Folders",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Use the chapter's commands together to write, copy, and remove a file, and print where the backup is.",
+  "prerequisites": ["Deleting Safely"],
+  "hint": "Set-Content makes report.txt. Copy-Item makes report-backup.txt with the same text. Remove-Item deletes report.txt. Write-Output prints the sentence with the backup's name in it."
+}

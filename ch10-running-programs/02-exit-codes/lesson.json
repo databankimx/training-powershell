@@ -1,0 +1,8 @@
+{
+  "title": "Exit Codes",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Run a program that exits with code 3, then print the code it reported.",
+  "prerequisites": ["Running a Program"],
+  "hint": "First line: cmd /c \"exit 3\" with the command in double quotes. Second line: Write-Output with Exit code: and $LASTEXITCODE inside double quotes. Read the variable on the line straight after the program."
+}

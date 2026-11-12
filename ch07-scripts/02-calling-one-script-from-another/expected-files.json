@@ -1,0 +1,5 @@
+{
+  "files": {
+    "helper.ps1": "Write-Output \"Hi from helper\"\n"
+  }
+}

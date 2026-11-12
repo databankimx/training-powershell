@@ -1,0 +1,8 @@
+{
+  "title": "Finding a Command",
+  "runtime": "powershell",
+  "minutes": 15,
+  "objective": "Find a command by its verb and noun, and print its name in a sentence.",
+  "prerequisites": ["Getting Help"],
+  "hint": "Write-Output with a string in double quotes. Start it with Found: and a space, then put $((Get-Command -Verb Set -Noun Content).Name) after it."
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Summary: Environment, PATH, and Profiles",
+  "runtime": "powershell",
+  "minutes": 20,
+  "objective": "Set an environment variable and a PATH entry for the session, and report both.",
+  "prerequisites": ["Profiles"],
+  "hint": "Set $env:GREETING to Hello. Put C:\\Development\\ps-practice; in front of $env:Path with +. Then Write-Output with Setting: and $env:GREETING, and a second with On PATH: and the -split ';' -contains check in $(...)."
+}
