@@ -17,6 +17,6 @@
     "markdown-it": "^15.0.3"
   },
   "devDependencies": {
-    "electron": "45.3.2"
+    "electron": "45.4.1"
   }
 }
