@@ -705,18 +705,22 @@ function Install-VsCodeContextMenu {
             Set-Outcome "vscode-context-menu" "warning" "Code.exe wasn't found, so the Open with Code menu entries weren't added."
             return
         }
+        # The keys are written with .NET. The PowerShell registry provider treats * in a key name as a wildcard, and
+        # New-Item and New-ItemProperty don't take -LiteralPath.
         $entries = @(
-            @{ Key = "HKCU:\Software\Classes\*\shell\VSCode";                    Argument = "%1" },
-            @{ Key = "HKCU:\Software\Classes\Directory\shell\VSCode";            Argument = "%1" },
-            @{ Key = "HKCU:\Software\Classes\Directory\Background\shell\VSCode"; Argument = "%V" }
+            @{ Path = "Software\Classes\*\shell\VSCode";                    Argument = "%1" },
+            @{ Path = "Software\Classes\Directory\shell\VSCode";            Argument = "%1" },
+            @{ Path = "Software\Classes\Directory\Background\shell\VSCode"; Argument = "%V" }
         )
+        $hkcu = [Microsoft.Win32.Registry]::CurrentUser
         foreach ($entry in $entries) {
-            $key = $entry.Key
-            New-Item -LiteralPath $key -Force | Out-Null
-            Set-Item -LiteralPath $key -Value "Open w&ith VS Code"
-            New-ItemProperty -LiteralPath $key -Name "Icon" -Value "`"$exe`",0" -PropertyType String -Force | Out-Null
-            New-Item -LiteralPath "$key\command" -Force | Out-Null
-            Set-Item -LiteralPath "$key\command" -Value "`"$exe`" `"$($entry.Argument)`""
+            $shellKey = $hkcu.CreateSubKey($entry.Path)
+            $shellKey.SetValue("", "Open w&ith VS Code")
+            $shellKey.SetValue("Icon", "`"$exe`",0")
+            $shellKey.Close()
+            $commandKey = $hkcu.CreateSubKey($entry.Path + "\command")
+            $commandKey.SetValue("", "`"$exe`" `"$($entry.Argument)`"")
+            $commandKey.Close()
         }
         Set-Outcome "vscode-context-menu" "ok" "Open with Code added to the Explorer right-click menu for this user"
     } catch {
