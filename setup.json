@@ -16,7 +16,7 @@
       "winget": "Microsoft.VisualStudioCode",
       "extensions": [ "ms-vscode.powershell" ]
     },
-    "notepadPlusPlus": { "install": false, "winget": "Notepad++.Notepad++" },
+    "notepadPlusPlus": { "install": true, "winget": "Notepad++.Notepad++" },
     "buildTools": { "install": false }
   },
   "steps": [
