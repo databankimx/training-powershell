@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "name": "PowerShell Basics",
+  "folder": "training-powershell",
+  "repoUrl": "https://github.com/databankimx/training-powershell.git",
+  "branch": "dev",
+  "baseDirectory": "C:\\Development\\training",
+  "runTests": true,
+  "installs": {
+    "git": { "install": true, "winget": "Git.Git" },
+    "powershell7": { "install": true, "pinned": "7", "winget": "Microsoft.PowerShell" },
+    "node": { "install": true, "pinned": "24", "orNewer": true, "winget": "OpenJS.NodeJS.LTS" },
+    "vcRuntime": { "install": true },
+    "vscode": {
+      "install": true,
+      "winget": "Microsoft.VisualStudioCode",
+      "extensions": [ "ms-vscode.powershell" ]
+    },
+    "notepadPlusPlus": { "install": false, "winget": "Notepad++.Notepad++" },
+    "buildTools": { "install": false }
+  },
+  "steps": [
+    {
+      "name": "Runner packages",
+      "type": "npm",
+      "folder": "lesson-runner",
+      "command": "ci",
+      "requires": [ "node" ]
+    },
+    {
+      "name": "Runner tests",
+      "type": "npm-run",
+      "folder": "lesson-runner",
+      "script": "test",
+      "runTests": true,
+      "requires": [ "node" ]
+    }
+  ],
+  "launch": {
+    "ide": "vscode",
+    "kind": "electron",
+    "folder": "lesson-runner"
+  }
+}
