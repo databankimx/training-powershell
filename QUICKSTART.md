@@ -4,39 +4,114 @@ This guide gets the PowerShell Basics reader open. The reader is a desktop windo
 
 ## Quick setup with the script
 
-The tutorial lives at [databankimx/training-powershell](https://github.com/databankimx/training-powershell).
+### What gets installed
 
-`setup.ps1` does the whole setup. You can run it from anywhere. If it isn't inside the repository, it clones the repository into `C:\Development\training\training-powershell` and runs the cloned copy. It then:
+By default, the setup installs:
 
-- checks for Git, and installs it with winget if it's missing
-- checks for PowerShell 7, and installs it with winget if it's missing. If the script was started in Windows PowerShell 5.1, it relaunches itself in PowerShell 7 once that's installed
-- checks for Node.js 24 or later, and installs the LTS release with winget if it's missing
-- checks for the C++ Build Tools, which are the fallback if Electron's download fails
-- installs the reader's packages exactly as recorded in `lesson-runner\package-lock.json`
-- makes sure the Electron binary is present, and if its download fails, rebuilds the native modules with the C++ environment and tries again
-- runs the reader's tests, and stops at the first failure
+* Git
+* PowerShell 7
+* Node.js 24 or newer
+* Microsoft Visual C++ runtime
+* VS Code, with the extensions ms-vscode.powershell
+* Notepad++
 
-It's safe to run more than once. Anything already in place is skipped.
+The C++ Build Tools aren't installed up front. The script installs them only if Electron's binary can't download.
 
-Open PowerShell, and run:
+The setup then runs these steps: Runner packages; Runner tests. At the end it opens the repository in VS Code and starts the lesson runner window (Electron).
+
+### Getting started
+
+There are three methods available to set up this tutorial. They are currently Windows-only.
+
+#### Full Automation (if you don't have Git currently set up)
+
+This process will install Git and copy the repository to a subfolder of `C:\Development\training` and install all necessary software and extensions for the tutorial's lesson runner.
+
+1. Obtain the tutorial's GitHub slug name, which is `training-powershell`
+2. Open PowerShell using "Run as Administrator"
+3. Run the script below
 
 ```pwsh
+# Obtain the load tutorial script
+irm https://raw.githubusercontent.com/databankimx/training-shared-template/main/load-tutorial.ps1 -OutFile "$env:TEMP\load-tutorial.ps1"
+
+# Perform automated setup
+powershell -NoProfile -ExecutionPolicy Bypass -File "$env:TEMP\load-tutorial.ps1" -RepoUrl https://github.com/databankimx/training-powershell.git
+```
+
+#### Automated Setup from Local Repo (assumes you already have Git installed and set up)
+
+In this process, you pull the existing repository and then run its setup script, which installs all necessary software and extensions for the tutorial's lesson runner.
+
+1. Obtain the tutorial's GitHub slug name, which is `training-powershell`
+2. Open PowerShell using "Run as Administrator"
+3. If you will use the default base directory `C:\Development\training`, run the following:
+
+```pwsh
+# Create the base folder if it doesn't exist yet
+New-Item -ItemType Directory -Force -Path C:\Development\training | Out-Null
+```
+
+4. Clone the repository. If you're using a different base directory, replace `C:\Development\training` with your path:
+
+```pwsh
+# Go there and clone the tutorial
+cd C:\Development\training
+git clone https://github.com/databankimx/training-powershell.git
+cd training-powershell
+```
+
+5. If desired, edit the setup configuration, which determines what software is installed automatically (see "Change what gets installed" below)
+
+```pwsh
+# Optional: edit setup.json before installations
+notepad setup.json
+```
+
+6. Save the configuration if you edited it, then run the setup script
+
+##### If using the default base path, run this:
+
+```pwsh
+# Run the setup
 powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
 ```
 
-The `-ExecutionPolicy Bypass` part lets this one script run. It doesn't change any setting on your machine.
-
-The C++ Build Tools are about 4 to 5 GB and can take several minutes. They need an **Administrator** PowerShell. If you aren't an administrator, the script stops at that step and says so. Open PowerShell as Administrator, and run the script again.
-
-If you only want to check your setup, without installing anything, add `-SkipInstall`:
+##### If using a different base path, replace `<BASE_DIR>` with your path and run this:
 
 ```pwsh
-powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1 -SkipInstall
+# Run the setup
+powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1 -BaseDirectory <BASE_DIR>
 ```
 
-When the script finishes, it prints a summary and the command to start the reader. Every line should say `ok`.
+#### Manual Setup from Local Repo
 
-Installing uses winget. If winget isn't available, install **App Installer** from the Microsoft Store first. Company policy can block installs, in which case the script stops and you'll need IT.
+If you want to do everything manually, you can pull the repository and set up software on your own.
+
+1. Obtain the tutorial's GitHub slug name, which is `training-powershell`
+2. Run the script below
+
+```pwsh
+git clone https://github.com/databankimx/training-powershell.git
+```
+
+3. Review README.md and QUICKSTART.md in the repository for instructions for manual setup.
+
+### Switches and notes
+
+* `-SkipInstall` checks what's installed and installs nothing.
+* `-NoLaunch` runs the setup but doesn't open VS Code or start the runner.
+* `-SkipTests` skips the course tests, which the setup runs by default.
+* Installing uses winget. If winget isn't available, install **App Installer** from the Microsoft Store first. Company policy can block installs, in which case the script stops and you'll need IT.
+* If an install needs administrator rights, the script stops before installing anything and asks you to run it again from an Administrator PowerShell window.
+
+### Change what gets installed
+
+The settings are in `setup.json`, in the repository folder. Open it in any text editor:
+
+* Set an install's `"install"` to `true` to include it, or `false` to skip it.
+* `"pinned"` sets the version. `"extensions"` lists the VS Code extensions to add.
+* Save the file, then run `setup.ps1` again. It skips what's already installed.
 
 ## Requirements
 
