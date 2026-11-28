@@ -3,7 +3,7 @@
   "name": "PowerShell Basics",
   "folder": "training-powershell",
   "repoUrl": "https://github.com/databankimx/training-powershell.git",
-  "branch": "dev",
+  "branch": "main",
   "baseDirectory": "C:\\Development\\training",
   "runTests": true,
   "installs": {
